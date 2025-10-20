@@ -1,6 +1,6 @@
 # About Me
 
-I am an innovative product designer and technologist with more than 16 years of hands-on experience in technical design, CAD, and architectural solutions, now actively pivoting my career into the dynamic field of '**Data Science and AI**'. My current studies for a Master of Science at '**GISMA University in Potsdam**' are expanding my skillset into machine learning, data analytics, and digital business transformation. I am passionate about combining my deep knowledge of product design lifecycles with data-driven methodologies to create smarter, more impactful solutions.
+I am an innovative product designer and technologist with more than 16 years of hands-on experience in technical design, CAD, and architectural solutions, now actively pivoting my career into the dynamic field of <span style="color: rgba(195, 13, 13, 1); font-weight: bold;">**Data Science and AI**</span>. My current studies for a Master of Science at **GISMA University in Potsdam** are expanding my skillset into machine learning, data analytics, and digital business transformation. I am passionate about combining my deep knowledge of product design lifecycles with data-driven methodologies to create smarter, more impactful solutions.
 
 # My Journey
 
