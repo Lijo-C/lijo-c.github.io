@@ -1,6 +1,6 @@
 # About Me
 
-I am an innovative product designer and technologist with more than 16 years of hands-on experience in technical design, CAD, and architectural solutions, now actively pivoting my career into the dynamic field of <span style="color: rgba(195, 13, 13, 1); font-weight: bold;">Data Science and AI</span>. My current studies for a Master of Science at **GISMA University in Potsdam** are expanding my skillset into machine learning, data analytics, and digital business transformation. I am passionate about combining my deep knowledge of product design lifecycles with data-driven methodologies to create smarter, more impactful solutions.
+I am an innovative product designer and technologist with more than 16 years of hands-on experience in technical design, CAD, and architectural solutions, now actively pivoting my career into the dynamic field of ***Data Science and AI***. My current studies for a Master of Science at ***GISMA University in Potsdam*** are expanding my skillset into machine learning, data analytics, and digital business transformation. I am passionate about combining my deep knowledge of product design lifecycles with data-driven methodologies to create smarter, more impactful solutions.
 
 # My Journey
 
@@ -24,7 +24,7 @@ I have delivered successful projects for global engineering firms and creative s
 ## Career Highlights
 
 	•	Led technical design and shop drawings for landmark projects: Museum of the Future, Atlantis The Royal Rooftop Club, Talabat HQ (Dubai), Sea World Abu Dhabi and Dubai Expo-2020.
-	•	Managed site operations and product delivery as Senior CAD Technologist for Arabtec Construction Co. and China State Construction Engineering Corp.
+	•	Managed site operations and product delivery as Senior CAD Technologist for Arabtec Construction Co.*** and ***China State Construction Engineering Corp.
 	•	Delivered creative interior and product solutions for luxury hotels, museums, and residential ventures in the Middle East and India.
 
 ## Education
