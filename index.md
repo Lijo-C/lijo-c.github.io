@@ -1,8 +1,6 @@
 ---
 layout: default
-title: My Portfolio
+title: Home
 ---
 
-# Welcome to my portfolio!
-
-This is my GitHub Pages site with a simple Jekyll theme.
+# Welcome to My Portfolio
