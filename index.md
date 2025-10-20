@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Home
+# Lijo Chacko
 ---
 
 # Welcome to My Portfolio
