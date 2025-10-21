@@ -3,8 +3,8 @@ title:                 Hydejack
 copyright:             © 2024. All rights reserved.
 
 accent_image:          /assets/img/sidebar-bg.jpg
-accent_color:          rgb(48,161,162) # updated to dark-teal accent
-theme_color:           rgb(10,34,40)  # updated to deeper teal/dark background
+accent_color:          rgb(79,177,186)
+theme_color:           rgb(25,55,71)
 
 google_fonts:          false
 
@@ -39,15 +39,6 @@ hydejack:
     sunrise:           6
     sunset:            18
     icon:              true
-    color_scheme:
-      light:
-        background:     rgb(245,247,248)
-        surface:        rgb(255,255,255)
-        text:           rgb(25,55,71)
-      dark:
-        background:     rgb(10,34,40)
-        surface:        rgb(15,45,50)
-        text:           rgb(220,236,238)
 
   offline:
     enabled:           false
