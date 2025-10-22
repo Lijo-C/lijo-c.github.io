@@ -374,49 +374,131 @@
 <!-- 2nd about -->
 
 
+
 <style>
+    /* Your original styles */
     #section-642a8ba1477feg {
         position: relative;
-        background-image: url('https://lijo-c.github.io/Assets/9.png');
+        background-image: url('https://lijo-c.github.io/Assets/10.png');
         background-size: 100% auto;
-        background-position: top center;
+        background-position: bottom center;
         background-repeat: no-repeat;
         background-attachment: scroll;
         min-height: auto !important;
         height: auto !important;
-        padding: 180px 0;
+        padding: 0px 0;
+    }
+
+    /* --- Styles for the new QR Code Gallery --- */
+    .qr-gallery {
+        display: grid;
+        /* Creates 6 columns on large screens */
+        grid-template-columns: repeat(6, 1fr); 
+        gap: 25px; /* Space between the QR code cards */
+        padding: 15px 0;
+        margin-top: 50px;
+    }
+
+    .qr-item {
+        background-color: #8f0c0c;
+        border: 0px solid #110cab;
+        border-radius: 20px;
+        padding: 10px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s, box-shadow 0.2s;
     }
     
-    /* Remove the default white background */
-    #section-642a8ba1477fe.bg-primary-white {
-        background-color: transparent !important;
+    .qr-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     }
-    
-    /* Optional: Add subtle text shadow for better readability */
-    #section-642a8ba1477fe .container {
-        text-shadow: 1px 1px 3px rgba(112, 111, 111, 0.8);
+
+    .qr-item img {
+        max-width: 160px; /* Adjust size of QR code image */
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        border-radius: 4px;
     }
+
+    .qr-item p {
+        margin: 0;
+        color: hsl(0, 0%, 98%);
+        font-weight: bold;
+        font-size: 1.25em;
+    }
+
+    /* --- Responsive adjustments for the gallery --- */
     
-    /* Mobile responsiveness */
+    /* For tablets: 2 columns */
     @media (max-width: 768px) {
-        #section-642a8ba1477fe {
-            background-size: 100% auto !important;
+        .qr-gallery {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    /* For mobile phones: 1 column */
+    @media (max-width: 480px) {
+        .qr-gallery {
+            grid-template-columns: 1fr;
         }
     }
 </style>
-<section id="section-642a8ba1477feg" class="s123-module s123-module-headers layout-20 bg-primary-white hpm-height-30vh headers-fix-mobile-height headers-responsive-layout" data-module-id="642a8ba1477fe" data-module-type-num="167" data-slider-speed="5"  data-version="2" data-mobile-tool-style=""><!-- Manage Buttons --><!-- Container --><div class="container" data-aos="fade-up">
 
- <span style="font-size:1.5em; font-weight:bold; display:block; text-align:left; color:#9C2007; margin-bottom: 0.5em;">My Journey</span>
-        <p style="line-height: 1.3;">
+<section id="section-642a8ba1477feg" class="s123-module s123-module-headers layout-20 bg-primary-white hpm-height-30vh headers-fix-mobile-height headers-responsive-layout" data-module-id="642a8ba1477fe" data-module-type-num="167" data-slider-speed="5"  data-version="2" data-mobile-tool-style="">
+    <!-- Container -->
+    <div class="container" data-aos="fade-up">
+
+        <ul style="margin-left: 1em; line-height: 1.3;">
+        <span style="font-size:1.5em; font-weight:bold; display:block; text-align:top left; color:#9C2007; margin-bottom: .5em;">My Journey & Vision</span>
+        <p style="line-height: 1.2;"><br>
         I have delivered successful projects for global engineering firms and creative studios across U.A.E., Saudi Arabia, Syria and India. My expertise covers everything from translating conceptual sketches into manufacturable designs to collaborating across disciplines for seamless project execution. Managing technical drawings, team coordination, and digital design, I thrive on integrating cutting-edge software like AutoCAD, SketchUp, and KeyShot with emerging analytics platforms in Python and Google Colab.</p>
+        <p style="line-height: 1.2;"></p>
+        I am committed to lifelong learning, regularly exploring new technologies and design trends. My goal is to leverage both my creative instincts and analytical capabilities to solve business challenges and drive innovation. I am currently seeking a Praktikum or Werkstudent position in Berlin to apply my unique blend of skills in real-world business environments.</p><ul style="margin-left: 1em; line-height: 1.3;"></ul>
 
-<span style="font-size:2em; font-weight:bold; display:block; text-align:left;color:#9C2007;">My Vision</span>
-<br>
-I am committed to lifelong learning, regularly exploring new technologies and design trends. My goal is to leverage both my creative instincts and analytical capabilities to solve business challenges and drive innovation. I am currently seeking a Praktikum or Werkstudent position in Berlin to apply my unique blend of skills in real-world business environments.
+        <!-- ===== START OF QR CODE GALLERY ===== -->
+        <div class="qr-gallery">
 
-<br><br><span style="font-size:2em; font-weight:bold; display:block; text-align:left;color:#9C2007;">Contact</span>
-<br>
-Phone : +4917625089214<br>Email : lijochacko@hotmail.com<br>https://www.linkedin.com/in/lijo-chacko-iype/<br>&nbsp;</div></div></div></section>
+            <!-- QR Item 1 -->
+            <div class="qr-item">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.linkedin.com" alt="QR Code for LinkedIn Profile">
+                <p>LinkedIn</p>
+            </div>
+
+            <!-- QR Item 2 -->
+            <div class="qr-item">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com" alt="QR Code for GitHub Profile">
+                <p>GitHub</p>
+            </div>
+
+            <!-- QR Item 3 -->
+            <div class="qr-item">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://example.com" alt="QR Code for Online Portfolio">
+                <p>Portfolio</p>
+            </div>
+            <!-- QR Item 3 -->
+            <div class="qr-item">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://example.com" alt="QR Code for Online Portfolio">
+                <p>CV</p>
+            </div>
+            <!-- QR Item 3 -->
+            <div class="qr-item">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://example.com" alt="QR Code for Online Portfolio">
+                <p>Website</p>
+            </div>
+            <!-- QR Item 3 -->
+            <div class="qr-item">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://example.com" alt="QR Code for Online Portfolio">
+                <p>Contact</p>
+            </div>
+        </div>
+        <!-- ===== END OF QR CODE GALLERY ===== -->
+
+        <br><br>
+
+    </div>
+</section>
 
 
 
