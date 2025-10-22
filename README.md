@@ -26,7 +26,10 @@ I have delivered successful projects for global engineering firms and creative s
 	•	Led technical design and shop drawings for landmark projects: Museum of the Future, Atlantis The Royal Rooftop Club, Talabat HQ (Dubai), Sea World Abu Dhabi and Dubai Expo-2020.
 	•	Managed site operations and product delivery as Senior CAD Technologist for Arabtec Construction Co.*** and ***China State Construction Engineering Corp.
 	•	Delivered creative interior and product solutions for luxury hotels, museums, and residential ventures in the Middle East and India.
-
+	•	Supervised drafting teams and managed drawing schedules, submittal logs, and RFIs on large-scale construction projects.
+	•	Coordinated interdisciplinary design integration of structural, electrical, and mechanical plans.
+	•	pplied Agile and Lean methodologies for project management, improving productivity and timely delivery.
+	
 ## Education
 
 	•	MSc Data Science, AI & Digital Business (GISMA University, Germany, 2026 – ongoing)
