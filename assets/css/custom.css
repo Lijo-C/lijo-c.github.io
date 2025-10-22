@@ -1,0 +1,22 @@
+.s123-module-portfolio.layout-1 ul.portfolio-images-container {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    list-style: none;
+    grid-gap: 32px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .s123-module-portfolio.layout-1 ul.portfolio-images-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .s123-module-portfolio.layout-1 ul.portfolio-images-container {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+}
