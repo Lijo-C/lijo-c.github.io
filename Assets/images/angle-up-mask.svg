@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <!-- Simple upward-pointing triangle used as a mask for the gotoTop icon -->
+  <path d="M12 8l-6 6h12z" fill="#000"/>
+</svg>
