@@ -425,44 +425,152 @@
         <p style="line-height: 1.2;"></p>
         I am committed to lifelong learning, regularly exploring new technologies and design trends. My goal is to leverage both my creative instincts and analytical capabilities to solve business challenges and drive innovation. I am currently seeking a Praktikum or Werkstudent position in Berlin to apply my unique blend of skills in real-world business environments.</p><ul style="margin-left: 1em; line-height: 1.3;"></ul>
 
+
+
+
         <!-- ===== START OF QR CODE GALLERY ===== -->
-        <div class="qr-gallery">
+        <!-- QR Item 1 -->
+<div class="qr-item">
+    <a href="https://www.linkedin.com/in/lijo-chacko-iype/" target="_blank" rel="noopener noreferrer" class="qr-link">
+        <img src="https://lijo-c.github.io/Assets/Linkedin.png" alt="QR Code for LinkedIn">
+        <p>LinkedIn</p>
+    </a>
+</div>
 
-            <!-- QR Item 1 -->
-            <div class="qr-item">
-                <a href="www.linkedin.com/in/lijo-chacko-iype/" target="_blank" rel="noopener noreferrer"></a>
-                <img src="https://lijo-c.github.io/Assets/Linkedin.png" alt="QR Code for LinkedIn">
-                <p>LinkedIn</p>
-            </div>
+<!-- QR Item 2 -->
+<div class="qr-item">
+    <a href="https://github.com/Lijo-C" target="_blank" rel="noopener noreferrer" class="qr-link">
+        <img src="https://lijo-c.github.io/Assets/Github.png" alt="QR Code for GitHub">
+        <p>GitHub</p>
+    </a>
+</div>
 
-            <!-- QR Item 2 -->
-            <div class="qr-item">
-                <img src="https://lijo-c.github.io/Assets/Github.png" alt="QR Code for GitHub">
-                <p>GitHub</p>
-            </div>
+<!-- QR Item 3 -->
+<div class="qr-item">
+    <a href="https://lijo-c.github.io/CV/PORTFOLIO.pdf" target="_blank" rel="noopener noreferrer" class="qr-link">
+        <img src="https://lijo-c.github.io/Assets/Portfolio.png" alt="QR Code for Portfolio">
+        <p>Portfolio</p>
+    </a>
+</div>
 
-            <!-- QR Item 3 -->
-            <div class="qr-item">
-                <img src="https://lijo-c.github.io/Assets/Portfolio.png" alt="QR Code for Portfolio">
-                <p>Portfolio</p>
-            </div>
-            <!-- QR Item 3 -->
-            <div class="qr-item">
-                <img src="https://lijo-c.github.io/Assets/CV.png" alt="QR Code for CV">
-                <p>CV</p>
-            </div>
-            <!-- QR Item 3 -->
-            <div class="qr-item">
-                <img src="https://lijo-c.github.io/Assets/Website.png" alt="QR Code for Website">
-                <p>Website</p>
-            </div>
-            <!-- QR Item 3 -->
-            <div class="qr-item">
-                <img src="https://lijo-c.github.io/Assets/Contact.png" alt="QR Code for Contact">
-                <p>Contact</p>
-            </div>
-        </div>
-        <!-- ===== END OF QR CODE GALLERY ===== -->
+<!-- QR Item 4 -->
+<div class="qr-item">
+    <a href="https://lijo-c.github.io/CV/Lijo%20Chacko-CV.pdf" target="_blank" rel="noopener noreferrer" class="qr-link">
+        <img src="https://lijo-c.github.io/Assets/CV.png" alt="QR Code for CV">
+        <p>CV</p>
+    </a>
+</div>
+
+<!-- QR Item 5 -->
+<div class="qr-item">
+    <a href="https://lijo-c.github.io/index.html" target="_blank" rel="noopener noreferrer" class="qr-link">
+        <img src="https://lijo-c.github.io/Assets/Website.png" alt="QR Code for Website">
+        <p>Website</p>
+    </a>
+</div>
+
+<!-- QR Item 6 -->
+<div class="qr-item">
+    <a href="mailto:lijochacko@hotmail.com" class="qr-link">
+        <img src="https://lijo-c.github.io/Assets/Contact.png" alt="QR Code for Contact">
+        <p>Contact</p>
+    </a>
+</div>
+
+<style>
+/* QR Item Container */
+.qr-item {
+    display: inline-block;
+    margin: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* QR Link Styling */
+.qr-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* QR Image Styling */
+.qr-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    padding: 10px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* QR Text Styling */
+.qr-item p {
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effects */
+.qr-item:hover {
+    transform: translateY(-5px);
+}
+
+.qr-item:hover img {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.qr-item:hover p {
+    color: #9C2007; /* Or your preferred accent color */
+}
+
+/* Active/Click Effect */
+.qr-link:active {
+    transform: scale(0.98);
+}
+
+/* Optional: Add a subtle overlay on hover */
+.qr-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(156, 32, 7, 0.1); /* Using your theme color */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    border-radius: 10px;
+}
+
+.qr-link:hover::before {
+    opacity: 1;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .qr-item {
+        margin: 10px;
+    }
+    
+    .qr-item img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .qr-item p {
+        font-size: 14px;
+    }
+}
+</style>
 
         <br><br>
 
