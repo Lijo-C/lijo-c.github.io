@@ -454,6 +454,7 @@
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
                 height: 100%;
                 border: 1px solid #eee;
+                cursor: pointer; /* Ensures it looks clickable */
             }
 
             .doc-card:hover {
@@ -478,13 +479,13 @@
                 background-color: #fff0ed; 
             }
 
-            /* Styling for the Icons inside the box */
+            /* Styling for the Icons */
             .doc-icon {
                 font-size: 3.5rem; 
                 color: #9C2007;
             }
             
-            /* Styling for Text (like "CV") inside the box */
+            /* Styling for Text */
             .doc-text-icon {
                 font-size: 3rem;
                 font-weight: 900;
@@ -531,7 +532,7 @@
 
             <div class="doc-gallery-grid">
                 
-                <a href="CV/Lijo%20Chacko-CV.pdf" target="_blank" class="doc-card" data-allow-external-link="true">
+                <a href="CV/Lijo%20Chacko-CV.pdf" target="_blank" class="doc-card">
                     <div class="doc-placeholder-box">
                         <div class="doc-text-icon">CV</div>
                     </div>
@@ -541,7 +542,7 @@
                     </div>
                 </a>
 
-                <a href="CV/PORTFOLIO.pdf" target="_blank" class="doc-card" data-allow-external-link="true">
+                <a href="CV/PORTFOLIO.pdf" target="_blank" class="doc-card">
                     <div class="doc-placeholder-box">
                         <i class="fa fa-folder-open doc-icon"></i>
                     </div>
@@ -551,7 +552,7 @@
                     </div>
                 </a>
 
-                <a href="https://www.linkedin.com/in/lijo-chacko-iype/" target="_blank" class="doc-card" data-allow-external-link="true">
+                <div class="doc-card" onclick="window.open('https://www.linkedin.com/in/lijo-chacko-iype/', '_blank');">
                     <div class="doc-placeholder-box">
                         <i class="fa fa-linkedin-square doc-icon"></i>
                     </div>
@@ -559,9 +560,9 @@
                         <h3>LinkedIn</h3>
                         <span>Visit Profile</span>
                     </div>
-                </a>
+                </div>
 
-                <a href="https://github.com/lijo-c" target="_blank" class="doc-card" data-allow-external-link="true">
+                <div class="doc-card" onclick="window.open('https://github.com/lijo-c', '_blank');">
                     <div class="doc-placeholder-box">
                         <i class="fa fa-github doc-icon"></i>
                     </div>
@@ -569,10 +570,13 @@
                         <h3>GitHub</h3>
                         <span>View Code</span>
                     </div>
-                </a>
+                </div>
 
             </div>
         </div>
+        ```
+
+**Why this will work:** The tracking script only looks for tags starting with `<a href=...`. By using `<div onclick=...`, the script won't even "see" these links, so it can't break them.
         ```
         <br><br>
 
