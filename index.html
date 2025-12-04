@@ -784,26 +784,46 @@
 <div><div class="magic-button-container"><input type="hidden" id="magicButtonSettings" value="{&quot;active&quot;:false,&quot;style&quot;:&quot;mainColor&quot;,&quot;items&quot;:{},&quot;greeter&quot;:{&quot;active&quot;:false,&quot;value&quot;:&quot;&quot;},&quot;mobileFullWidth&quot;:false,&quot;siteLogo&quot;:&quot;https:\/\/images.cdn-files-a.com\/uploads\/8027084\/400_6468a084978c4.png&quot;,&quot;siteName&quot;:&quot;LIJO CHACKO&quot;}"><input type="hidden" id="shareMagicButtonSettings" value="{&quot;active&quot;:false,&quot;items&quot;:{&quot;faceBook&quot;:{&quot;order&quot;:1,&quot;value&quot;:&quot;&quot;}},&quot;siteLogo&quot;:&quot;https:\/\/images.cdn-files-a.com\/uploads\/8027084\/400_6468a084978c4.png&quot;,&quot;siteName&quot;:&quot;LIJO CHACKO&quot;}"><div class="all-magic-buttons" data-is-managment="1"></div></div></div><div class="s123-front-last-element hidden"></div>
 
 <style>
-    /* --- 1. GRID LAYOUT (3 Columns) --- */
+    /* --- 1. FORCE HEADING CENTER --- */
+    #section-64677b02b6606 .modulesTitle,
+    #section-64677b02b6606 .modulesTitle .col-xs-12,
+    #section-64677b02b6606 .page-header-wrap,
+    #section-64677b02b6606 h2 {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: block !important;
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    /* --- 2. FORCE GRID CENTER & LAYOUT --- */
+    #section-64677b02b6606 .container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important; /* Centers the grid block itself */
+    }
+
     #section-64677b02b6606 .container > .row {
         display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important; 
         gap: 25px !important;
-        margin: 0 !important;
+        
+        /* Center the grid items */
+        justify-content: center !important;
+        justify-items: center !important;
+        
+        margin: 0 auto !important;
         width: 100% !important;
+        max-width: 1100px !important; /* Keeps grid compact */
     }
 
-    /* Fix Layout Scattering */
+    /* UNWRAP THE TEMPLATE GROUPS (Fixes Scattering) */
     #section-64677b02b6606 .clearfix { display: contents !important; }
-    #section-64677b02b6606 .clearfix::before,
-    #section-64677b02b6606 .clearfix::after,
-    #section-64677b02b6606 .row::before,
-    #section-64677b02b6606 .row::after {
-        display: none !important;
-        content: none !important;
-    }
+    #section-64677b02b6606 .clearfix:before, 
+    #section-64677b02b6606 .clearfix:after { display: none !important; }
 
-    /* --- 2. CARD STYLE (Unclickable) --- */
+    /* --- 3. CARD STYLE (No Links, Unclickable) --- */
     #section-64677b02b6606 .ipost {
         width: 100% !important;
         max-width: 100% !important;
@@ -818,75 +838,68 @@
         
         display: flex !important;
         flex-direction: column !important;
-
-        /* DISABLE CLICKS / LINKS */
-        pointer-events: none !important; 
+        
+        pointer-events: none !important; /* DISABLE CLICKS */
         cursor: default !important;
     }
 
-    /* Remove link styling (color/underline) */
+    /* Remove Link Styling */
     #section-64677b02b6606 .ipost a {
         text-decoration: none !important;
         color: inherit !important;
         pointer-events: none !important;
     }
 
-    /* --- 3. FORCE VERTICAL STACK --- */
-    #section-64677b02b6606 .ipost .row {
-        display: flex !important;
-        flex-direction: column !important;
-        margin: 0 !important;
-        height: 100% !important;
-    }
-
-    #section-64677b02b6606 .ipost .col-md-6 {
-        width: 100% !important;
-        padding: 0 !important;
-        flex: none !important;
-    }
-
-    /* --- 4. IMAGE STYLE (Full Width Stretch) --- */
+    /* --- 4. IMAGE STYLE (Fit Height / Centered) --- */
     #section-64677b02b6606 .blog-image {
         width: 100% !important;
-        height: 180px !important; /* Fixed height */
+        height: 180px !important; 
         margin: 0 !important;
         background-color: #fff !important;
         border-bottom: 3px solid #9C2007 !important;
         
-        /* Remove padding so image touches edges */
-        padding: 0 !important;
-        display: block !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
 
     #section-64677b02b6606 .blog-image img {
         width: 100% !important;
         height: 100% !important;
-        
-        /* 'cover' forces the image to fill the entire box without gaps */
-        object-fit: cover !important; 
-        padding: 0 !important; /* Ensures no internal space */
+        object-fit: contain !important; 
+        padding: 10px !important;
     }
 
-    /* --- 5. TEXT STYLE --- */
+    /* --- 5. TEXT STYLE (Centered) --- */
+    #section-64677b02b6606 .ipost .row {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+    
+    #section-64677b02b6606 .col-md-6 {
+        width: 100% !important;
+        padding: 0 !important;
+        float: none !important; /* Stop Bootstrap floating */
+    }
+
     #section-64677b02b6606 .col-md-6:last-child {
         padding: 20px 15px !important;
         text-align: center !important;
-        flex-grow: 1 !important;
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: flex-start !important;
     }
 
     #section-64677b02b6606 .blog-title h3 {
+        text-align: center !important;
         margin: 0 0 8px 0 !important;
         font-size: 1rem !important;
         font-weight: 700 !important;
         color: #333 !important;
         text-transform: uppercase !important;
-        line-height: 1.2 !important;
     }
 
     #section-64677b02b6606 .blog-content p {
+        text-align: center !important;
         font-size: 0.85rem !important;
         color: #666 !important;
         margin: 0 !important;
