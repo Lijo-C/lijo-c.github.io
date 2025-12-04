@@ -108,27 +108,27 @@
 
 <!-- portfolio links -->
 <style>
-    /* 1. SHRINK THE SECTION HEIGHT (Remove Empty Vertical Space) */
+    /* 1. SHRINK THE SECTION HEIGHT */
     #section-646750943d850 {
         padding-top: 10px !important;
-        padding-bottom: 0px !important;
+        padding-bottom: 20px !important;
         min-height: auto !important;
         margin-top: 10px !important;
     }
 
-    /* 2. Container Width - UPDATED TO BE WIDE */
+    /* 2. Container Width - Fit Screen but don't stretch forever */
     #section-646750943d850 .portfolio-images-container {
-        max-width: 100% !important;   /* Allows it to fill the whole section width */
-        width: 100% !important;       /* Forces full width */
-        margin: 0 auto !important;
-        padding: 0 !important;
+        width: 100% !important;       /* Fills the screen width */
+        max-width: 1200px !important; /* Cap width on giant monitors so it stays neat */
+        margin: 0 auto !important;    /* Centers it */
+        padding: 0 15px !important;   /* Adds small buffer on sides */
     }
 
-    /* 3. Card Style (Rounded, 3D, and Landscape Ratio) */
+    /* 3. Card Style - 16:9 Aspect Ratio */
     #section-646750943d850 .grid-item {
-        /* I changed this to 60% so they look like wide rectangles. 
-           If you want them taller/square, change this to 100% */
-        padding-top: 60% !important; 
+        /* 56.25% = 16:9 Ratio (Standard wide shape). 
+           This ensures it scales down proportionally without looking 'out of shape' */
+        padding-top: 56.25% !important; 
         
         border-radius: 20px !important;
         overflow: hidden !important;
@@ -153,27 +153,25 @@
         box-shadow: 0 20px 40px rgba(156, 32, 7, 0.3) !important;
     }
     
-    /* 6. Tighten the Title Spacing */
+    /* 6. Title Spacing */
     #section-646750943d850 .page-header-wrap {
-        margin-bottom: 20px !important; 
-        padding-top: 0px !important;
+        margin-bottom: 15px !important;
+        padding-top: 10px !important;
     }
 </style>
 <style>
     /* --- 1. EXPERIENCE SECTION IMAGES --- */
-    /* Target the specific container for Experience images */
     #section-64677b02b6606 .blog-image {
-        max-width: 380px !important;         /* Reduced width (was 100%) */
-        aspect-ratio: 4/3 !important;        /* Fixes shape to be nice rectangle */
-        margin: 0 auto 20px auto !important; /* Centers the image */
+        max-width: 380px !important;         
+        aspect-ratio: 4/3 !important;        
+        margin: 0 auto 20px auto !important; 
         
-        border-radius: 20px !important;      /* Rounds the corners */
-        border: 10px solid rgba(0, 0, 0, 0.599) !important; /* Clean subtle border */
-        box-shadow: 0 8px 20px rgba(0,0,0,0.1) !important; /* Soft 3D Shadow */
+        border-radius: 20px !important;      
+        border: 10px solid rgba(0, 0, 0, 0.599) !important; 
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1) !important; 
         overflow: hidden !important;
     }
 
-    /* Ensure the image inside fits perfectly */
     #section-64677b02b6606 .blog-image img {
         width: 100% !important;
         height: 100% !important;
@@ -181,19 +179,27 @@
     }
 
     /* --- 2. QUALIFICATION (EDUCATION) SECTION IMAGES --- */
-    /* Target the specific container for Education images */
-    #section-6467779eb6536 .service-item .fa-stack {
-        width: 380px !important;             /* specific width */
-        height: 180px !important;            /* specific height */
-        margin: 0 auto 20px auto !important; /* Centers the image */
-        
-        border-radius: 20px !important;      /* Rounds the corners */
-        border: 10px solid rgb(119, 6, 6) !important; /* Clean subtle border */
-        box-shadow: 0 8px 20px rgba(0,0,0,0.1) !important; /* Soft 3D Shadow */
-    }
     
-    /* Ensure the background image fits nicely */
+    /* FIX: This centers the content inside the Education Cards */
+    #section-6467779eb6536 .service-item {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important; /* <--- This forces horizontal centering */
+        text-align: center !important;
+    }
+
+    /* Style the Education Image Box */
     #section-6467779eb6536 .service-item .fa-stack {
+        display: block !important;
+        width: 380px !important;             
+        max-width: 100% !important;          
+        height: 180px !important;            
+        margin: 0 auto 20px auto !important; 
+        
+        border-radius: 20px !important;      
+        border: 10px solid rgb(119, 6, 6) !important; 
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1) !important; 
+        
         background-size: cover !important;
         background-position: center !important;
     }
