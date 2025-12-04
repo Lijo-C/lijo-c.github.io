@@ -783,7 +783,122 @@
 <input type="hidden" id="cz_uid" value="">
 <div><div class="magic-button-container"><input type="hidden" id="magicButtonSettings" value="{&quot;active&quot;:false,&quot;style&quot;:&quot;mainColor&quot;,&quot;items&quot;:{},&quot;greeter&quot;:{&quot;active&quot;:false,&quot;value&quot;:&quot;&quot;},&quot;mobileFullWidth&quot;:false,&quot;siteLogo&quot;:&quot;https:\/\/images.cdn-files-a.com\/uploads\/8027084\/400_6468a084978c4.png&quot;,&quot;siteName&quot;:&quot;LIJO CHACKO&quot;}"><input type="hidden" id="shareMagicButtonSettings" value="{&quot;active&quot;:false,&quot;items&quot;:{&quot;faceBook&quot;:{&quot;order&quot;:1,&quot;value&quot;:&quot;&quot;}},&quot;siteLogo&quot;:&quot;https:\/\/images.cdn-files-a.com\/uploads\/8027084\/400_6468a084978c4.png&quot;,&quot;siteName&quot;:&quot;LIJO CHACKO&quot;}"><div class="all-magic-buttons" data-is-managment="1"></div></div></div><div class="s123-front-last-element hidden"></div>
 
+<style>
+    /* --- 1. MASTER GRID LAYOUT --- */
+    #section-64677b02b6606 .container > .row {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important; /* 3 Columns */
+        gap: 25px !important; /* Gap between cards */
+        
+        /* Resets */
+        margin: 0 !important;
+        width: 100% !important;
+    }
 
+    /* --- 2. THE LAYOUT FIX (Crucial) --- */
+    /* This command tells the browser to IGNORE the grouping divs 
+       so the cards can flow freely into the grid */
+    #section-64677b02b6606 .clearfix {
+        display: contents !important; 
+    }
+
+    /* --- 3. CARD STYLE --- */
+    #section-64677b02b6606 .ipost {
+        /* Layout Reset (Fixes the "scattered" look) */
+        float: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        height: 100% !important; /* Ensures all cards match height */
+        
+        /* Visual Style */
+        background: #ffffff !important;
+        border-radius: 12px !important;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.08) !important;
+        border: 1px solid #eee !important;
+        overflow: hidden !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    #section-64677b02b6606 .ipost:hover {
+        transform: translateY(-5px) !important;
+        box-shadow: 0 12px 24px rgba(156, 32, 7, 0.15) !important;
+    }
+
+    /* --- 4. CARD CONTENT STACKING --- */
+    #section-64677b02b6606 .ipost .row {
+        display: flex !important;
+        flex-direction: column !important; /* Stacks Image on Top, Text Below */
+        margin: 0 !important;
+        height: 100% !important;
+    }
+
+    /* Reset the inner columns to fill the card */
+    #section-64677b02b6606 .ipost .col-md-6 {
+        width: 100% !important;
+        padding: 0 !important;
+        flex: none !important;
+    }
+
+    /* --- 5. IMAGE FITTING (Contain) --- */
+    #section-64677b02b6606 .blog-image {
+        width: 100% !important;
+        height: 150px !important; /* Fixed height for image area */
+        margin: 0 !important;
+        background-color: #fff !important;
+        border-bottom: 3px solid #9C2007 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    #section-64677b02b6606 .blog-image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important; /* Shows full logo, no cropping */
+        padding: 15px !important;
+    }
+
+    /* --- 6. TEXT STYLING --- */
+    #section-64677b02b6606 .col-md-6:last-child {
+        padding: 15px !important;
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        flex-grow: 1 !important; /* Fills remaining height */
+    }
+
+    #section-64677b02b6606 .blog-title h3 {
+        margin: 0 0 5px 0 !important;
+        font-size: 1rem !important;
+        font-weight: 700 !important;
+        color: #333 !important;
+        text-transform: uppercase !important;
+    }
+
+    #section-64677b02b6606 .blog-content p {
+        font-size: 0.85rem !important;
+        color: #666 !important;
+        margin: 0 !important;
+        line-height: 1.3 !important;
+    }
+
+    /* --- 7. RESPONSIVE RULES --- */
+    /* Tablet: 2 Columns */
+    @media (max-width: 992px) {
+        #section-64677b02b6606 .container > .row {
+            grid-template-columns: repeat(2, 1fr) !important;
+        }
+    }
+    /* Phone: 1 Column */
+    @media (max-width: 600px) {
+        #section-64677b02b6606 .container > .row {
+            grid-template-columns: 1fr !important;
+        }
+    }
+</style>
 </body>
 
 
