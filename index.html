@@ -110,22 +110,26 @@
 <style>
     /* 1. SHRINK THE SECTION HEIGHT (Remove Empty Vertical Space) */
     #section-646750943d850 {
-        padding-top: 10px !important;    /* Default is usually 100px - reduced to 10px */
-        padding-bottom: 0px !important; /* Default is usually 100px - reduced to 20px */
-        min-height: auto !important;     /* Stop it from forcing a full screen height */
-        margin-top: 10 !important;
+        padding-top: 10px !important;
+        padding-bottom: 0px !important;
+        min-height: auto !important;
+        margin-top: 10px !important;
     }
 
-    /* 2. Container Width (Keep images centered and sized) */
+    /* 2. Container Width - UPDATED TO BE WIDE */
     #section-646750943d850 .portfolio-images-container {
-        max-width: 700px !important; 
+        max-width: 100% !important;   /* Allows it to fill the whole section width */
+        width: 100% !important;       /* Forces full width */
         margin: 0 auto !important;
-        padding:1px !important;
+        padding: 0 !important;
     }
 
-    /* 3. Card Style (SQUARE, Rounded, 3D) */
+    /* 3. Card Style (Rounded, 3D, and Landscape Ratio) */
     #section-646750943d850 .grid-item {
-        padding-top: 75% !important; /* 100% = PERFECT SQUARE */
+        /* I changed this to 60% so they look like wide rectangles. 
+           If you want them taller/square, change this to 100% */
+        padding-top: 60% !important; 
+        
         border-radius: 20px !important;
         overflow: hidden !important;
         box-shadow: 0 10px 25px rgba(0,0,0,0.25) !important;
@@ -151,8 +155,8 @@
     
     /* 6. Tighten the Title Spacing */
     #section-646750943d850 .page-header-wrap {
-        margin-bottom: -20px !important; /* Reduces gap between "Portfolio" and images */
-        padding-top: -50px !important;
+        margin-bottom: 20px !important; 
+        padding-top: 0px !important;
     }
 </style>
 <style>
