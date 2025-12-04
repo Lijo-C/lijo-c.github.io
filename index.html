@@ -107,7 +107,93 @@
 
 
 <!-- portfolio links -->
+<style>
+    /* 1. SHRINK THE SECTION HEIGHT (Remove Empty Vertical Space) */
+    #section-646750943d850 {
+        padding-top: 10px !important;    /* Default is usually 100px - reduced to 10px */
+        padding-bottom: 0px !important; /* Default is usually 100px - reduced to 20px */
+        min-height: auto !important;     /* Stop it from forcing a full screen height */
+        margin-top: 10 !important;
+    }
 
+    /* 2. Container Width (Keep images centered and sized) */
+    #section-646750943d850 .portfolio-images-container {
+        max-width: 700px !important; 
+        margin: 0 auto !important;
+        padding:1px !important;
+    }
+
+    /* 3. Card Style (SQUARE, Rounded, 3D) */
+    #section-646750943d850 .grid-item {
+        padding-top: 75% !important; /* 100% = PERFECT SQUARE */
+        border-radius: 20px !important;
+        overflow: hidden !important;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.25) !important;
+        transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+        border: 1px solid rgba(0,0,0,0.1) !important;
+    }
+
+    /* 4. Image Fit */
+    #section-646750943d850 .grid-item img {
+        height: 100% !important;
+        width: 100% !important;
+        object-fit: cover !important;
+        top: 0 !important;
+        left: 0 !important;
+        position: absolute !important;
+    }
+
+    /* 5. Hover Effect */
+    #section-646750943d850 .grid-item:hover {
+        transform: translateY(-8px) !important;
+        box-shadow: 0 20px 40px rgba(156, 32, 7, 0.3) !important;
+    }
+    
+    /* 6. Tighten the Title Spacing */
+    #section-646750943d850 .page-header-wrap {
+        margin-bottom: -20px !important; /* Reduces gap between "Portfolio" and images */
+        padding-top: -50px !important;
+    }
+</style>
+<style>
+    /* --- 1. EXPERIENCE SECTION IMAGES --- */
+    /* Target the specific container for Experience images */
+    #section-64677b02b6606 .blog-image {
+        max-width: 380px !important;         /* Reduced width (was 100%) */
+        aspect-ratio: 4/3 !important;        /* Fixes shape to be nice rectangle */
+        margin: 0 auto 20px auto !important; /* Centers the image */
+        
+        border-radius: 20px !important;      /* Rounds the corners */
+        border: 10px solid rgba(0, 0, 0, 0.599) !important; /* Clean subtle border */
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1) !important; /* Soft 3D Shadow */
+        overflow: hidden !important;
+    }
+
+    /* Ensure the image inside fits perfectly */
+    #section-64677b02b6606 .blog-image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+
+    /* --- 2. QUALIFICATION (EDUCATION) SECTION IMAGES --- */
+    /* Target the specific container for Education images */
+    #section-6467779eb6536 .service-item .fa-stack {
+        width: 380px !important;             /* specific width */
+        height: 180px !important;            /* specific height */
+        margin: 0 auto 20px auto !important; /* Centers the image */
+        
+        border-radius: 20px !important;      /* Rounds the corners */
+        border: 10px solid rgb(119, 6, 6) !important; /* Clean subtle border */
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1) !important; /* Soft 3D Shadow */
+    }
+    
+    /* Ensure the background image fits nicely */
+    #section-6467779eb6536 .service-item .fa-stack {
+        background-size: cover !important;
+        background-position: center !important;
+    }
+</style>
 <section id="section-646750943d850" class="s123-module s123-module-portfolio layout-4 bg-primary section-static-text-color" data-module-id="646750943d850" data-module-type-num="106" style="background:transparent !important;position:relative;--section-image-opacity:0;--section-title-color:#9C2007;--section-title-reverse-color: #ffffff;padding-top:5px;margin-top:5px;" data-overlay-opacity="true"><div data-aos="fade-up" class="container-fluid page_header_style noBackground"><div class="row"><div class="container moduleTitleContainer"><div class="row modulesTitle text-center"><div class="col-xs-12"><div class="page-header-wrap"><H2 id="section-646750943d850-title"  class="s123-page-header  pageHeaderBorderbottom extraSidePadding">Portfolio</H2></div></div></div></div><div class="container" data-aos="fade-up"></div><div class="container"><div class="row"><div class="col-sm-20"><!-- grid --><div class="portfolio-images-container "><!-- grid item --><div class="grid-item preview-highlighter p-h-e-bottom-0" data-unique-id="64675094b6ad5"><!-- Link To Page --><a href="/Assets/2d-drawings.html"  class="portfolio-image-link s123-fast-page-load"  data-allow-external-link="true" title="2D Drawings"><!-- Image --><img class="lazyload" data-src="https://lijo-c.github.io/Assets/2d.png" alt="2D Drawings" style="object-position:50.00% 50.00%;"><!-- Image overlay --><div class="image-grid-overlay"><div class="title">2D Drawings<i class="fa fa-long-arrow-right" aria-hidden="true"></i></div></div></a></div><!-- grid item --><div class="grid-item preview-highlighter p-h-e-bottom-0" data-unique-id="64675094ba186"><!-- Link To Page --><a href="/Assets/product-designs.html"  class="portfolio-image-link s123-fast-page-load"  data-allow-external-link="true" title="Product designs"><!-- Image --><img class="lazyload" data-src="https://lijo-c.github.io/Assets/3d.png" alt="Product designs" style="object-position:center center;"><!-- Image overlay --><div class="image-grid-overlay"><div class="title">Product designs<i class="fa fa-long-arrow-up" aria-hidden="true"></i></div></div></a></div></div></div></div></div></section>
 
 
@@ -228,7 +314,7 @@
                         </div><!-- Item info area  -->
                         <div class="col-md-6">
                             <div class="blog-title">
-                                <h3 class="t400"><a href="experience/china-state-construction-engineering-corporation.html" class="s123-fast-page-load" aria-label="China State Construction Engineering Corporation"><span style="color:#000000;font-size:1.5em; ">China State Construction Engineering Corporation</span></a></h3>
+                                <h3 class="t400"><a href="experience/china-state-construction-engineering-corporation.html" class="s123-fast-page-load" aria-label="China State Construction Engineering Corporation"><span style="color:#000000;font-size:1.1em; ">China State Construction Engineering Corporation</span></a></h3>
                             </div>
                             <div class="blog-content breakable">
                                 <p><span style="font-size:1.2em; ">Sr. CAD Technologist from JUNE 2024– APRIL 2025</span></p>
@@ -249,7 +335,7 @@
                         </div><!-- Item info area  -->
                         <div class="col-md-6">
                             <div class="blog-title">
-                                <h3 class="t400"><a href="experience/new-exclusive-decoration-design-fit-out-llc.html" class="s123-fast-page-load" aria-label="New Exclusive Decoration Design &amp;amp; Fit Out L.L.C"><span style="color:#000000;font-size:1.5em; ">New Exclusive Decoration Design &amp; Fit Out L.L.C</span></a></h3>
+                                <h3 class="t400"><a href="experience/new-exclusive-decoration-design-fit-out-llc.html" class="s123-fast-page-load" aria-label="New Exclusive Decoration Design &amp;amp; Fit Out L.L.C"><span style="color:#000000;font-size:1.1em; ">New Exclusive Decoration Design &amp; Fit Out L.L.C</span></a></h3>
                             </div>
                             <div class="blog-content breakable">
                                 <p><span style="font-size:1.2em; ">Designer from JULY 2023– JUNE 2024</span></p>
@@ -272,7 +358,7 @@
                         </div><!-- Item info area  -->
                         <div class="col-md-6">
                             <div class="blog-title">
-                                <h3 class="t400"><a href="experience/exclusive-acrylic-middle-east-industries-llc.html" class="s123-fast-page-load" aria-label="Exclusive Acrylic Middle East Industries LLC."><span style="color:#000000;font-size:1.5em; ">Exclusive Acrylic Middle East Industries LLC.</span></a></h3>
+                                <h3 class="t400"><a href="experience/exclusive-acrylic-middle-east-industries-llc.html" class="s123-fast-page-load" aria-label="Exclusive Acrylic Middle East Industries LLC."><span style="color:#000000;font-size:1.1em; ">Exclusive Acrylic Middle East Industries LLC.</span></a></h3>
                             </div>
                             <div class="blog-content breakable">
                                 <p><span style="font-size:1.2em; ">Product Designer from MAY 2021 – JUN 2023</span></p>
@@ -293,7 +379,7 @@
                         </div><!-- Item info area  -->
                         <div class="col-md-6">
                             <div class="blog-title">
-                                <h3 class="t400"><a href="experience/arabtec-construction-llc.html" class="s123-fast-page-load" aria-label="Arabtec Construction LLC."><span style="color:#000000;font-size:1.5em; ">Arabtec Construction LLC.</span></a></h3>
+                                <h3 class="t400"><a href="experience/arabtec-construction-llc.html" class="s123-fast-page-load" aria-label="Arabtec Construction LLC."><span style="color:#000000;font-size:1.1em; ">Arabtec Construction LLC.</span></a></h3>
                             </div>
                             <div class="blog-content breakable">
                                 <p><span style="font-size:1.2em; ">Sr. Architectural Technologist from JUN 2007– DEC 2020</span></p>
@@ -316,7 +402,7 @@
                         </div><!-- Item info area  -->
                         <div class="col-md-6">
                             <div class="blog-title">
-                                <h3 class="t400"><a href="experience/sam-associates.html" class="s123-fast-page-load" aria-label="Sam &amp;amp; Associates"><span style="color:#000000;font-size:1.5em; ">Sam &amp; Associates</span></a></h3>
+                                <h3 class="t400"><a href="experience/sam-associates.html" class="s123-fast-page-load" aria-label="Sam &amp;amp; Associates"><span style="color:#000000;font-size:1.1em; ">Sam &amp; Associates</span></a></h3>
                             </div>
                             <div class="blog-content breakable">
                                 <p><span style="font-size:1.2em; ">Interior designer &amp; Projects coordinator from JAN 2002– DEC 2006</span></p>
