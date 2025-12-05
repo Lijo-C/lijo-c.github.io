@@ -524,17 +524,18 @@
             </p>
         </ul>
 
-               <style>
+                    <style>
             /* Document Gallery Grid Styling */
             .doc-gallery-container {
                 margin: 40px 0 60px 0;
-                padding: 0 15px;
+                padding: 0 5px; /* Less padding to give columns more room */
             }
             
             .doc-gallery-grid {
                 display: grid;
-                grid-template-columns: repeat(4, 1fr); 
-                gap: 20px;
+                /* FORCE 4 COLUMNS ALWAYS */
+                grid-template-columns: repeat(4, 1fr) !important; 
+                gap: 10px !important; /* Tighter gap */
                 list-style: none;
                 padding: 0;
             }
@@ -543,31 +544,25 @@
             .doc-card {
                 display: block;
                 background: #ffffff;
-                border-radius: 12px;
+                border-radius: 8px; /* Slightly smaller radius */
                 overflow: hidden;
                 text-decoration: none !important;
-                box-shadow: 0 4px 8px rgba(0,0,0,0.08);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                height: 100%;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.08);
                 border: 1px solid #eee;
+                height: 100%;
                 cursor: pointer;
             }
 
-            .doc-card:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 12px 24px rgba(156, 32, 7, 0.15);
-            }
-
-            /* THE NEW PLACEHOLDER BOX */
+            /* THE PLACEHOLDER BOX */
             .doc-placeholder-box {
                 width: 100%;
-                height: 140px; 
+                height: 90px; /* Shorter height */
                 background-color: #f8f8f8; 
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
-                border-bottom: 4px solid #9C2007; 
+                border-bottom: 3px solid #9C2007; 
                 transition: background-color 0.3s ease;
             }
 
@@ -575,49 +570,64 @@
                 background-color: #fff0ed; 
             }
 
-            /* Styling for the Icons */
+            /* Icons */
             .doc-icon {
-                font-size: 3.5rem; 
+                font-size: 2.5rem; 
                 color: #9C2007;
             }
             
-            /* Styling for Text */
             .doc-text-icon {
-                font-size: 3rem;
+                font-size: 2rem;
                 font-weight: 900;
                 color: #9C2007;
                 font-family: sans-serif;
-                letter-spacing: -1px;
             }
 
-            /* Text Area below the box */
+            /* Text Area */
             .doc-info {
-                padding: 15px;
+                padding: 8px 4px;
                 text-align: center;
             }
 
             .doc-info h3 {
                 margin: 0;
-                font-size: 1.1rem;
+                font-size: 0.85rem; /* Compact font */
                 font-weight: 700;
                 color: #333;
+                line-height: 1.1;
             }
 
             .doc-info span {
                 display: block;
-                margin-top: 5px;
-                font-size: 0.85rem;
+                margin-top: 4px;
+                font-size: 0.7rem;
                 color: #9C2007; 
                 font-weight: 600;
                 text-transform: uppercase;
             }
 
-            /* Responsive Design */
-            @media (max-width: 992px) {
-                .doc-gallery-grid { grid-template-columns: repeat(2, 1fr); }
-            }
-            @media (max-width: 576px) {
-                .doc-gallery-grid { grid-template-columns: 1fr; }
+            /* --- MOBILE SPECIFIC SCALING (To make 4 cols fit on phone) --- */
+            @media (max-width: 768px) {
+                .doc-gallery-grid {
+                    gap: 5px !important; /* Tiny gap */
+                }
+                .doc-placeholder-box {
+                    height: 60px !important; /* Smaller icon box */
+                    border-bottom-width: 2px !important;
+                }
+                .doc-icon { font-size: 2.5rem !important; }
+                .doc-text-icon { font-size: 2.5rem !important; }
+                
+                .doc-info { padding: 5px 2px !important; }
+                
+                .doc-info h3 { 
+                    font-size: 1rem !important; /* Very small text */
+                    white-space: nowrap;           /* Prevents wrapping */
+                    overflow: hidden;
+                    text-overflow: ellipsis;       /* Adds "..." if text is too long */
+                }
+                
+                .doc-info span { display: none !important; } /* Hide "View PDF" on phones to save space */
             }
         </style>
 
@@ -627,14 +637,12 @@
             </span>
 
             <div class="doc-gallery-grid">
-                
                 <a href="CV/Lijo%20Chacko-CV.pdf" target="_blank" class="doc-card" data-allow-external-link="true">
                     <div class="doc-placeholder-box">
                         <div class="doc-text-icon">CV</div>
                     </div>
                     <div class="doc-info">
-                        <h3>Curriculum Vitae</h3>
-                        <span>View PDF</span>
+                        <h3>CV</h3> <span>View PDF</span>
                     </div>
                 </a>
 
@@ -643,31 +651,30 @@
                         <i class="fa fa-folder-open doc-icon"></i>
                     </div>
                     <div class="doc-info">
-                        <h3>Design Portfolio</h3>
-                        <span>View Projects</span>
+                        <h3>Portfolio</h3>
+                        <span>View</span>
                     </div>
                 </a>
 
-                <a href="https://www.linkedin.com/in/lijo-chacko-iype/" target="_blank" class="doc-card" data-allow-external-link="true">
+                <div class="doc-card" onclick="window.open('https://www.linkedin.com/in/lijo-chacko-iype/', '_blank');">
                     <div class="doc-placeholder-box">
                         <i class="fa fa-linkedin-square doc-icon"></i>
                     </div>
                     <div class="doc-info">
                         <h3>LinkedIn</h3>
-                        <span>Visit Profile</span>
+                        <span>Profile</span>
                     </div>
-                </a>
+                </div>
 
-                <a href="https://github.com/lijo-c" target="_blank" class="doc-card" data-allow-external-link="true">
+                <div class="doc-card" onclick="window.open('https://github.com/lijo-c', '_blank');">
                     <div class="doc-placeholder-box">
                         <i class="fa fa-github doc-icon"></i>
                     </div>
                     <div class="doc-info">
                         <h3>GitHub</h3>
-                        <span>View Code</span>
+                        <span>Code</span>
                     </div>
-                </a>
-
+                </div>
             </div>
         </div>
         
@@ -676,39 +683,183 @@
 
 
         <!-- ===== START OF QR CODE GALLERY ===== -->
-        <div class="qr-gallery">
+        <style>
+    /* 1. MASTER GRID LAYOUT (ALWAYS 6 COLUMNS) */
+    .qr-gallery {
+        display: grid;
+        /* Force 6 Columns on ALL screens (Desktop, Tablet, Mobile) */
+        grid-template-columns: repeat(6, 1fr) !important; 
+        gap: 15px; 
+        padding: 15px 0;
+        margin-top: 50px;
+    }
 
-           <!-- QR Item 3 -->
-            <div class="qr-item">
-                <img src="https://lijo-c.github.io/Assets/Contact.png" alt="QR Code for Contact">
-                <p>Contact</p>
-            </div>  
-          <!-- QR Item 3 -->
-            <div class="qr-item">
-                <img src="https://lijo-c.github.io/Assets/CV.png" alt="QR Code for CV">
-                <p>CV</p>
-            </div>
-            <!-- QR Item 3 -->
-            <div class="qr-item">
-                <img src="https://lijo-c.github.io/Assets/Portfolio.png" alt="QR Code for Portfolio">
-                <p>Portfolio</p>
-            </div>
-            <!-- QR Item 1 -->
-            <div class="qr-item">
-                <img src="https://lijo-c.github.io/Assets/Linkedin.png" alt="QR Code for LinkedIn">
-                <p>LinkedIn</p>
-            </div>
-            <!-- QR Item 3 -->
-            <div class="qr-item">
-                <img src="https://lijo-c.github.io/Assets/Website.png" alt="QR Code for Website">
-                <p>Website</p>
-            </div>
-            <!-- QR Item 2 -->
-            <div class="qr-item">
-                <img src="https://lijo-c.github.io/Assets/Github.png" alt="QR Code for GitHub">
-                <p>GitHub</p>
-            </div>           
-        </div>
+    /* 2. CARD STYLE */
+    .qr-item {
+        background-color: #8f0c0c;
+        border-radius: 12px;
+        padding: 10px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s;
+        cursor: zoom-in;
+        
+        /* Flex ensures contents center nicely */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .qr-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .qr-item img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 8px;
+        border-radius: 4px;
+        display: block;
+    }
+
+    .qr-item p {
+        margin: 0;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1.2;
+        width: 100%;
+    }
+
+    /* --- 3. MOBILE RESPONSIVE (Squish to fit 1 Row) --- */
+    @media (max-width: 768px) {
+        .qr-gallery {
+            gap: 5px !important; /* Tiny gap to make room */
+            padding: 10px 2px !important;
+        }
+        
+        .qr-item {
+            padding: 5px 2px !important; /* Minimal padding */
+            border-radius: 6px !important;
+        }
+        
+        .qr-item img {
+            margin-bottom: 5px !important;
+        }
+        
+        .qr-item p {
+            font-size: 1rem !important; /* Micro text */
+            white-space: nowrap;           /* Don't wrap text */
+            overflow: hidden;              /* Hide overflow */
+            text-overflow: ellipsis;       /* Add ... if too long */
+        }
+    }
+
+    /* --- 4. POPUP MODAL (Centered & 50% Width) --- */
+    .qr-modal {
+        display: none; 
+        position: fixed; 
+        z-index: 100000;
+        left: 0; 
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        background-color: rgba(0, 0, 0, 0); 
+        backdrop-filter: blur(5px);
+        
+        /* Centering */
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .qr-modal-content {
+        width: 50%;           /* 50% Width on Desktop */
+        min-width: 300px;     /* Safe width on mobile */
+        height: auto;
+        max-height: 80vh;
+        object-fit: contain;
+        
+        border-radius: 12px;
+        box-shadow: 0 0 50px rgba(255,255,255,0.2);
+        border: 5px solid #fff;
+        animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    @keyframes popIn {
+        from {transform: scale(0.5); opacity: 0;}
+        to {transform: scale(1); opacity: 1;}
+    }
+
+    #qr-caption {
+        margin-top: 20px;
+        color: #940909;
+        font-size: 1.5rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        text-align: center;
+    }
+
+    .qr-close-hint {
+        position: absolute;
+        bottom: 50px;
+        color: rgba(255,255,255,0.6);
+        font-size: 0.9rem;
+    }
+</style>
+
+<div class="qr-gallery">
+    <div class="qr-item" onclick="openQrModal(this)">
+        <img src="Assets/Contact.png" alt="QR Code for Contact">
+        <p>Contact</p>
+    </div>  
+    <div class="qr-item" onclick="openQrModal(this)">
+        <img src="Assets/CV.png" alt="QR Code for CV">
+        <p>CV</p>
+    </div>
+    <div class="qr-item" onclick="openQrModal(this)">
+        <img src="Assets/Portfolio.png" alt="QR Code for Portfolio">
+        <p>Portfolio</p>
+    </div>
+    <div class="qr-item" onclick="openQrModal(this)">
+        <img src="Assets/Linkedin.png" alt="QR Code for LinkedIn">
+        <p>LinkedIn</p>
+    </div>
+    <div class="qr-item" onclick="openQrModal(this)">
+        <img src="Assets/Website.png" alt="QR Code for Website">
+        <p>Website</p>
+    </div>
+    <div class="qr-item" onclick="openQrModal(this)">
+        <img src="Assets/Github.png" alt="QR Code for GitHub">
+        <p>GitHub</p>
+    </div>           
+</div>
+
+<div id="myQrModal" class="qr-modal" onclick="closeQrModal()">
+    <img class="qr-modal-content" id="img01">
+    <div id="qr-caption"></div>
+    <div class="qr-close-hint">Tap anywhere to close</div>
+</div>
+
+<script>
+    function openQrModal(element) {
+        var modal = document.getElementById("myQrModal");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("qr-caption");
+        var imgInside = element.querySelector('img');
+        var textInside = element.querySelector('p');
+
+        modal.style.display = "flex"; 
+        modalImg.src = imgInside.src;
+        captionText.innerHTML = textInside.innerText;
+    }
+
+    function closeQrModal() {
+        document.getElementById("myQrModal").style.display = "none";
+    }
+</script>
         <!-- ===== END OF QR CODE GALLERY ===== -->
 
         <br><br>
@@ -786,78 +937,65 @@
 <style>
     /* --- 1. FORCE HEADING CENTER --- */
     #section-64677b02b6606 .modulesTitle,
-    #section-64677b02b6606 .modulesTitle .col-xs-12,
-    #section-64677b02b6606 .page-header-wrap,
-    #section-64677b02b6606 h2 {
+    #section-64677b02b6606 .page-header-wrap {
         text-align: center !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        display: block !important;
+        margin: 0 auto !important;
         width: 100% !important;
         justify-content: center !important;
     }
 
-    /* --- 2. FORCE GRID CENTER & LAYOUT --- */
+    /* --- 2. GRID LAYOUT (4 Columns = Smaller Cards) --- */
     #section-64677b02b6606 .container {
         display: flex !important;
         flex-direction: column !important;
-        align-items: center !important; /* Centers the grid block itself */
+        align-items: center !important;
     }
 
     #section-64677b02b6606 .container > .row {
         display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important; 
-        gap: 25px !important;
+        /* 4 Columns matches your Document Gallery layout */
+        grid-template-columns: repeat(4, 1fr) !important; 
+        gap: 20px !important;
         
-        /* Center the grid items */
         justify-content: center !important;
-        justify-items: center !important;
-        
         margin: 0 auto !important;
         width: 100% !important;
-        max-width: 1100px !important; /* Keeps grid compact */
+        max-width: 1200px !important;
     }
 
-    /* UNWRAP THE TEMPLATE GROUPS (Fixes Scattering) */
+    /* Anti-Scatter Fix */
     #section-64677b02b6606 .clearfix { display: contents !important; }
     #section-64677b02b6606 .clearfix:before, 
     #section-64677b02b6606 .clearfix:after { display: none !important; }
 
-    /* --- 3. CARD STYLE (No Links, Unclickable) --- */
+    /* --- 3. CARD STYLE (Compact & Unclickable) --- */
     #section-64677b02b6606 .ipost {
         width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
         height: 100% !important;
-        
         background: #ffffff !important;
-        border-radius: 12px !important;
+        border-radius: 10px !important; /* Slightly smaller radius */
         box-shadow: 0 4px 8px rgba(0,0,0,0.08) !important;
         border: 1px solid #eee !important;
         overflow: hidden !important;
-        
         display: flex !important;
         flex-direction: column !important;
-        
-        pointer-events: none !important; /* DISABLE CLICKS */
+        pointer-events: none !important; 
         cursor: default !important;
     }
 
-    /* Remove Link Styling */
     #section-64677b02b6606 .ipost a {
         text-decoration: none !important;
         color: inherit !important;
         pointer-events: none !important;
     }
 
-    /* --- 4. IMAGE STYLE (Fit Height / Centered) --- */
+    /* --- 4. IMAGE STYLE (Smaller Height) --- */
     #section-64677b02b6606 .blog-image {
         width: 100% !important;
-        height: 180px !important; 
+        height: 140px !important; /* Reduced height to match small cards */
         margin: 0 !important;
         background-color: #fff !important;
         border-bottom: 3px solid #9C2007 !important;
-        
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
@@ -867,56 +1005,55 @@
         width: 100% !important;
         height: 100% !important;
         object-fit: contain !important; 
-        padding: 10px !important;
+        padding: 15px !important;
     }
 
-    /* --- 5. TEXT STYLE (Centered) --- */
-    #section-64677b02b6606 .ipost .row {
+    /* --- 5. TEXT STYLE (Compact) --- */
+    #section-64677b02b6606 .ipost .row,
+    #section-64677b02b6606 .col-md-6 {
         display: flex !important;
         flex-direction: column !important;
         width: 100% !important;
-        margin: 0 !important;
-    }
-    
-    #section-64677b02b6606 .col-md-6 {
-        width: 100% !important;
         padding: 0 !important;
-        float: none !important; /* Stop Bootstrap floating */
+        margin: 0 !important;
     }
 
     #section-64677b02b6606 .col-md-6:last-child {
-        padding: 20px 15px !important;
+        padding: 15px 10px !important;
         text-align: center !important;
+        flex-grow: 1 !important;
     }
 
     #section-64677b02b6606 .blog-title h3 {
-        text-align: center !important;
-        margin: 0 0 8px 0 !important;
-        font-size: 1rem !important;
+        margin: 0 0 5px 0 !important;
+        font-size: 0.95rem !important; /* Smaller Font */
         font-weight: 700 !important;
         color: #333 !important;
         text-transform: uppercase !important;
+        line-height: 1.2 !important;
     }
 
     #section-64677b02b6606 .blog-content p {
-        text-align: center !important;
-        font-size: 0.85rem !important;
+        font-size: 0.8rem !important; /* Smaller Font */
         color: #666 !important;
         margin: 0 !important;
     }
 
-    /* --- 6. RESPONSIVE --- */
+    /* --- 6. RESPONSIVE (Normal Readable Flow) --- */
+    /* Tablet: 2 Columns */
     @media (max-width: 992px) {
         #section-64677b02b6606 .container > .row {
             grid-template-columns: repeat(2, 1fr) !important;
         }
     }
+    /* Mobile: 1 Column (Readable) */
     @media (max-width: 600px) {
         #section-64677b02b6606 .container > .row {
             grid-template-columns: 1fr !important;
         }
     }
 </style>
+
 </body>
 
 
